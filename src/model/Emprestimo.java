@@ -1,20 +1,21 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
+
 import java.util.Date;
 
-/**
- *
- * @author RafaelG
- */
 public class Emprestimo {
-     private Date dataRetirada;
+
+    private Date dataRetirada;
     private Date dataDevolucaoEsperada;
     private Date dataDevolucaoReal;
     private String situacao;
+    private Usuario usuario;
+    private Livro livro;
 
+    
+    public Emprestimo() {
+    }
+
+    
     public Emprestimo(Date retirada, Date devolucaoEsperada) {
         this.dataRetirada = retirada;
         this.dataDevolucaoEsperada = devolucaoEsperada;
@@ -29,5 +30,21 @@ public class Emprestimo {
     public String verificarSituacao() {
         return situacao;
     }
+
+    public void setUsuario(Usuario usuario){
+        this.usuario = usuario;
+    }
+
+    public void setLivro(Livro livro){
+        this.livro = livro;
+    }
+
     
+    public Usuario getUsuario(){
+        return usuario;
+    }
+
+    public Livro getLivro(){
+        return livro;
+    }
 }

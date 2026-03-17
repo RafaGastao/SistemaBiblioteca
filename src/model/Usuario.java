@@ -1,28 +1,25 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
 
-/**
- *
- * @author RafaelG
- */
 public class Usuario {
+
     private String nome;
     private String matricula;
     private String endereco;
     private TipoUsuario tipoUsuario;
 
-    public Usuario(String nome, String matricula, String endereco, TipoUsuario tipoUsuario) {
+    
+    public Usuario() {
+    }
 
+   
+    public Usuario(String nome, String matricula, String endereco, TipoUsuario tipoUsuario) {
         this.nome = nome;
         this.matricula = matricula;
         this.endereco = endereco;
         this.tipoUsuario = tipoUsuario;
-
     }
 
+    // ✅ getters
     public String getNome() {
         return nome;
     }
@@ -30,5 +27,29 @@ public class Usuario {
     public String getMatricula() {
         return matricula;
     }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public TipoUsuario getTipoUsuario() {
+        return tipoUsuario;
+    }
+
     
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public void setTipoUsuario(TipoUsuario tipoUsuario) {
+        this.tipoUsuario = tipoUsuario;
+    }
 }
